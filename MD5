@@ -1,0 +1,14 @@
+e8f79ccd1acced4e8d05ec4398093a42 *DESCRIPTION
+f3e08a3f89c576b59ade251eafa5d7a3 *NAMESPACE
+8e95bd3634dbb044a89e174303fa09cc *R/boot.silhouette.R
+e2ae8b677d47dadb9b3c338dcd6ac3d4 *R/clusboot.R
+838928313918fa1218f7f15e9d31f137 *R/complete.linkage.R
+9750c10672a4551764bf4e7380900e47 *R/plot.clusboot.R
+7daae5384cc743d046c837092961f449 *build/partial.rdb
+0f01608300356264e1620e627ecbf81a *data/case_study_psychiatrist.rda
+602fed71fcdbd3dead709ead7bcfa933 *man/ClusBoot-package.Rd
+e7c8d822754be59587f0f44f98193e7d *man/boot.silhouette.Rd
+ee9aed8c28f04c09b2590a84c127d12e *man/case_study_psychiatrist.Rd
+21be27b22db9ba5482101b7cfa63d1c3 *man/clusboot.Rd
+27f2896c166a5065d7d91164ba0929d4 *man/complete.linkage.Rd
+730f2de0200dccb5c8aa44f7a3292cca *man/plot.clusboot.Rd

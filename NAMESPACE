@@ -1,0 +1,5 @@
+exportPattern("^[[:alpha:]]+")
+  importFrom("grDevices", "rainbow")
+  importFrom("graphics", "barplot", "plot", "points")
+  importFrom("stats", "as.dist", "cmdscale", "cutree", "dist", "hclust","optim")
+S3method(plot,clusboot)
