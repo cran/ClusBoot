@@ -2,20 +2,20 @@
 % Please edit documentation in R/funcs.R
 \name{boot.silhouette}
 \alias{boot.silhouette}
-\title{Constructs a silhouette plot based on proportion of times items cluster together}
+\title{Produces silhouette plots}
 \usage{
 boot.silhouette(clusboot.out, ...)
 }
 \arguments{
 \item{clusboot.out}{an object of class clusboot}
 
-\item{...}{more arguments to be passed to \code{plot()}}
+\item{...}{more arguments to be passed to \code{barplot()}}
 }
 \value{
-vector of silhouette widths for each of the clusters
+list of silhouette widths
 }
 \description{
-Constructs a silhouette plot based on proportion of times items cluster together
+Produces silhouette plots
 }
 \examples{
 out <- clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=complete.linkage)

@@ -21,6 +21,23 @@ an object of type clusboot
 \description{
 Performs bootstrap on a cluster analysis output
 }
+\details{
+Any R function performing cluster analysis can be specified in \code{clustering.func} although a wrapper function is
+typically needed to isolate only the vector output of cluster memberships. See \code{?complete.linkage} as an example.
+Should users perfer to use alternative resamling schemes, other than the bootstrap, Hennig (2007) discuss a variety
+of options which could be accessed by specifying \code{clustering.func = fpc.clusterboot}. In addition, the sampling
+method is specified in the argument \code{bootmethod} and additional arguments for the function \code{clusterboot} in the
+package \code{fpc} must be given. Note that only the resampling facilities of \code{clusterboot} is utilised while the
+computation of proportions and silhouette widths remain unchanged.
+}
 \examples{
 clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=complete.linkage)
+library(fpc)
+clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=fpc.clusterboot,
+          clustermethod=hclustCBI, method="complete", bootmethod="subset", subtuning=10)
+
+}
+\references{
+Hennig, C., 2007. Cluster-wise assessment of cluster stability. Computational Statistics & Data Analysis,
+52(1), pp.258-271.
 }

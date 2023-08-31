@@ -4,12 +4,14 @@
 \alias{plot.clusboot}
 \title{MDS plot of similarities given by the proportion of bootstrap replicates where objects cluster together}
 \usage{
-\method{plot}{clusboot}(x, col, ...)
+\method{plot}{clusboot}(x, col, show.silhouette = TRUE, ...)
 }
 \arguments{
 \item{x}{an object of class clusboot}
 
 \item{col}{single colour or a vector specifying a colour for each object}
+
+\item{show.silhouette}{logical indicating whether plotting character size should represent the inidivual silhouette values}
 
 \item{...}{more arguments to be passed to \code{plot()}}
 }
