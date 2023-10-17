@@ -182,7 +182,17 @@ fpc.clusterboot <- function(data, B, distances = (inherits(data, "dist")),
 #' @param clustering.func the function which will perform the clustering and output a vector of cluster memberships
 #' @param ... more arguments to be passed to the clustering function
 #'
-#' @return an object of type clusboot
+#' @return an object of class `clusboot` which is a list with the following components:
+#' \item{proportions}{matrix of size nxn with cell ij containing the proportion of bootstrap replicates
+#'                    in which object i and object j clustered together.}
+#' \item{clustering}{a vector of length n containing the cluster membership of the n input objects.}
+#' \item{sil}{a vector of length the number of clusters containing the bootstrap-silhouette values for the clusters.}
+#' \item{indv.sil}{a vector of length n containing the bootstrap-silhouette values for the individual objects.}
+#' \item{sil.order}{a vector of length n containing the ordering of the n objects used by the functions
+#'                  `boot.silhouette` and `boot.proportions` to order objects in the same cluster adjacent and
+#'                  clusters in decreasing order of cluster tightness.}
+#' \item{ave.sil.width}{the overall stability of the clustering solution, obtained by averaging over the individual object bootstrap-silhouette values.}
+#'
 #' @export
 #'
 #' @details
@@ -192,7 +202,8 @@ fpc.clusterboot <- function(data, B, distances = (inherits(data, "dist")),
 #' of options which could be accessed by specifying `clustering.func = fpc.clusterboot`. In addition, the sampling
 #' method is specified in the argument `bootmethod` and additional arguments for the function `clusterboot` in the
 #' package `fpc` must be given. Note that only the resampling facilities of `clusterboot` is utilised while the
-#' computation of proportions and silhouette widths remain unchanged.
+#' computation of proportions and silhouette widths remain unchanged. The output object of class `clusboot`
+#' will remain unchanged as only the resampling section of `clusterboot` is used.
 #'
 #' @examples
 #' clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=complete.linkage)

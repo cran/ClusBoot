@@ -16,7 +16,16 @@ clusboot(datmat, B = 1000, clustering.func = complete.linkage, ...)
 \item{...}{more arguments to be passed to the clustering function}
 }
 \value{
-an object of type clusboot
+an object of class \code{clusboot} which is a list with the following components:
+\item{proportions}{matrix of size nxn with cell ij containing the proportion of bootstrap replicates
+in which object i and object j clustered together.}
+\item{clustering}{a vector of length n containing the cluster membership of the n input objects.}
+\item{sil}{a vector of length the number of clusters containing the bootstrap-silhouette values for the clusters.}
+\item{indv.sil}{a vector of length n containing the bootstrap-silhouette values for the individual objects.}
+\item{sil.order}{a vector of length n containing the ordering of the n objects used by the functions
+\code{boot.silhouette} and \code{boot.proportions} to order objects in the same cluster adjacent and
+clusters in decreasing order of cluster tightness.}
+\item{ave.sil.width}{the overall stability of the clustering solution, obtained by averaging over the individual object bootstrap-silhouette values.}
 }
 \description{
 Performs bootstrap on a cluster analysis output
@@ -28,7 +37,8 @@ Should users perfer to use alternative resamling schemes, other than the bootstr
 of options which could be accessed by specifying \code{clustering.func = fpc.clusterboot}. In addition, the sampling
 method is specified in the argument \code{bootmethod} and additional arguments for the function \code{clusterboot} in the
 package \code{fpc} must be given. Note that only the resampling facilities of \code{clusterboot} is utilised while the
-computation of proportions and silhouette widths remain unchanged.
+computation of proportions and silhouette widths remain unchanged. The output object of class \code{clusboot}
+will remain unchanged as only the resampling section of \code{clusterboot} is used.
 }
 \examples{
 clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=complete.linkage)
