@@ -48,6 +48,6 @@ clusboot (scale(case.study.psychiatrist), B=100, k=6, clustering.func=fpc.cluste
 
 }
 \references{
-Hennig, C., 2007. Cluster-wise assessment of cluster stability. Computational Statistics & Data Analysis,
-52(1), pp.258-271.
+Hennig, C., 2007. Cluster-wise assessment of cluster stability. Computational Statistics & Data Analysis, 52(1), pp.258-271.
+Lubbe, S., 2024. Bootstrapping Cluster Analysis Solutions with the R Package ClusBoot. Austrian Journal of Statistics, 53(3), pp.1-19.
 }

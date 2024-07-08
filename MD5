@@ -1,4 +1,4 @@
-e89cc452f546cb832ebbe053462cd8f4 *DESCRIPTION
+5e8a7b9f088936b0b53480ce6a0db229 *DESCRIPTION
 1e56d0aff1225cea0aa97c60ce2c3e2f *LICENSE
 2410e9d6613fd651c8d7f3c9382dac34 *NAMESPACE
 b3e161ad905271694302b83b3e1a844c *R/data.R
@@ -8,7 +8,7 @@ a2ee10ee2551430e05c55bafa7df41c1 *R/funcs.R
 4c34860c48936fd9374f3c8200c256f5 *man/boot.silhouette.Rd
 88c40c753d56b806aba699712fa91ec5 *man/calc.silhouette.Rd
 7689190f22b577a7ee0e930d9ff080dd *man/case.study.psychiatrist.Rd
-3481e81149c596c76b3db8a1eed96f75 *man/clusboot.Rd
+a89a9b08e5175bc9f7682c9d1ec539ae *man/clusboot.Rd
 214b6f46eac17a1c085b98d5d0c4ee08 *man/complete.linkage.Rd
 502a5f8dd6ba90060101596366cb7d58 *man/figures/README-pressure-1.png
 472f73a74c6baa1642b06b9a6fa4e3c3 *man/fpc.clusterboot.Rd
